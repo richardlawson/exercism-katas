@@ -21,7 +21,7 @@ class Robot
     public function turnRight(): Robot
     {
         if ($this->direction === static::DIRECTION_WEST) {
-            $this->direction = 1;
+            $this->direction = static::DIRECTION_NORTH;
         } else {
             $this->direction++;
         }
@@ -32,7 +32,7 @@ class Robot
     public function turnLeft(): Robot
     {
         if ($this->direction === static::DIRECTION_NORTH) {
-            $this->direction = 4;
+            $this->direction = static::DIRECTION_WEST;
         } else {
             $this->direction--;
         }
